@@ -1,5 +1,22 @@
 Here are a few papers of interest I found in my arXiv feed. I'll add more if there are more this week.
 
+## [Jazz Contrafact Detection](https://arxiv.org/pdf/2208.00792.pdf)
+
+A contrafact is a melody that shares the same underlying chord progression as another melody, sometimes reharmonized. The authors propose a way to detect whether a melody is a contrafact of another, using music theory to inform chord vector embedding.
+
+### Problem
+
+The authors use a corpus of >2k melodies, with >100k chord symbols falling in 1,5k categories. As many of these chord symbols (20%) only occur only once in the corpus, a one-hot co-occurrence matrix is not a feasible way to encode progressions. To reduce dimensionality, the authors use 5 chord categories over 12 scale positions; each and every chord in the corpus is mapped to one of these 60 classes using music theory.
+
+### Model
+
+This is not a machine learning model but it is a modelisation of chord space. To every song, one can associate a co-occurrence matrix where the ijth position is the number of occurrences of chord j after chord i in the whole corpus. This yields a 63x63 matrix (60 chords + no-chord + START and END), whose normalized rows can be used as embeddings of each chord. The chord vectors can then be used to draw a path for each song in 63-dimensional space. The distance between two songs can then be calculated: the closer they are, the more likely one is a contrafact of the other.
+
+### Comments
+
+This is impossible to evaluate because there is no ground truth. But still a refreshing problem to tackle. 
+
+
 ## [Scrutinizing Shipment Records To Thwart Illegal Timber Trade](https://arxiv.org/pdf/2208.00493.pdf)
 
 The authors of this paper used machine learning to detect potential fraudulent timber shipments, based on shipment information: code (what kind of wood was shipped), weight, volume, ports of loading and unloading, origin and destination...
