@@ -18,9 +18,12 @@ The team behind DALL-E has made efforts to mitigate this bias, and the recently-
 ## The problem of regurgitation
 
 During development, the OpenAI team realized that DALL-E was sometimes regurgitating examples in the training dataset. Additionally to hurting performances (after all, DALL-E is supposed to invent new images, not copy existing ones), this could lead to copyright infringement and breach of privacy issues for the people whose picture is present in the dataset. 
+
 The regurgitated images presented two interesting features: they were almost all vector graphics (which contain little information and thus are easy to memorize), and, more importantly, all had several near-duplicates in the dataset. Maybe taking out the duplicates would solve the regurgitation problem?
+
 Identifying near duplicated images on such a huge dataset is ridiculously computationally intensive (every image has to be compared to literally every other image), so the developers took a clever approach: they first clustered the datase, then searched for near-duplicates of each image within its cluster. 
 This seemed to take care of the problem: none of the previously identified prompts (prompts which were present in the training dataset) lead to regurgitated images.
+
 Interestingly, when the developers asked a panel of humans to rate the output of the models (before and after deduplication), they found a slight preference for the model after deduplication. 
 
 ## Thoughts
