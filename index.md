@@ -1,5 +1,5 @@
 ---
-title: "Welcome to Bea's blog"
+title: "Hi, internet."
 ---
 
-I plan to talk about my interesting finds on the internet, mostly data science and digital stuff.
+This blog will serve as a notepad for myself, where I write about my digital, and mostly data science-related discoveries. 
