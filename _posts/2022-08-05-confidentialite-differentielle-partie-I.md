@@ -13,16 +13,16 @@ Autrement dit : l'anonymisation ne se résume pas à effacer le nom d'un jeu de 
 
 C'est là que les maths viennent à notre rescousse, en formalisant le concept de confidentialité, afin de pouvoir assurer aux personnes que leur anonymat sera respecté.
 
-## Le $k$-anonymat
+## Le $$k$$-anonymat
 
-On dit qu'un jeu de données est $$k$$-anonyme si, toute combinaison de données non-sensibles correspond à au moins \(k\) observations.
+On dit qu'un jeu de données est $$k$$-anonyme si, toute combinaison de données non-sensibles correspond à au moins $$k$$ observations.
 
-Par exemple, si notre jeu de données contient des informations démographiques comme la date de naissance, le sexe et le code postal, alors, pour qu'il soit \(3\)-anonyme, toute combinaison d'une date de naissance, d'un sexe et d'un code postal doit correspondre à au moins 3 individus différents.
-Plus \(k\) est un nombre élevé, et plus il est difficile d'identifier une personne dans un jeu de données \(k\)-anonyme.
+Par exemple, si notre jeu de données contient des informations démographiques comme la date de naissance, le sexe et le code postal, alors, pour qu'il soit $$3$$-anonyme, toute combinaison d'une date de naissance, d'un sexe et d'un code postal doit correspondre à au moins 3 individus différents.
+Plus $$k$$ est un nombre élevé, et plus il est difficile d'identifier une personne dans un jeu de données $$k$$-anonyme.
 
-Comment rend-on un jeu de données \(k\)-anonyme ? On peut, par exemple, supprimer toutes les observations (les lignes du tableau) qui représentent des combinaisons uniques de données démographiques (pour chaque date de naissance, sexe et code postal, si on obtient moins de \(k\) individus correspondant à ces trois critères, on les supprime du jeu de données). Mais on peut aussi changer l'échelle des données : en remplaçant le code postal par le département, la date de naissance par une tranche d'âge, etc.
+Comment rend-on un jeu de données $$k$$-anonyme ? On peut, par exemple, supprimer toutes les observations (les lignes du tableau) qui représentent des combinaisons uniques de données démographiques (pour chaque date de naissance, sexe et code postal, si on obtient moins de $$k$$ individus correspondant à ces trois critères, on les supprime du jeu de données). Mais on peut aussi changer l'échelle des données : en remplaçant le code postal par le département, la date de naissance par une tranche d'âge, etc.
 
-Le \(k\)-anonymat n'est pas une solution miracle : même si l'on ne parvient pas exactement à identifier la ligne correspondant à l'individu que l'on cherche dans le jeu de données, on pourra toujours localiser un groupe de lignes qui contient ses données.  Imaginons par exemple qu'on souhaite savoir si notre petit camarade Arthur a déjà pris de la drogue, à partir d'un jeu de données \(3\)-anonyme. On connaît la date de naissance d'Arthur, son lycée et son sexe, on récupère donc toutes les lignes du tableau qui correspondent à ces critères :
+Le $$k$$-anonymat n'est pas une solution miracle : même si l'on ne parvient pas exactement à identifier la ligne correspondant à l'individu que l'on cherche dans le jeu de données, on pourra toujours localiser un groupe de lignes qui contient ses données.  Imaginons par exemple qu'on souhaite savoir si notre petit camarade Arthur a déjà pris de la drogue, à partir d'un jeu de données $$3$$-anonyme. On connaît la date de naissance d'Arthur, son lycée et son sexe, on récupère donc toutes les lignes du tableau qui correspondent à ces critères :
 
 | Date de naissance | Sexe | Lycée       |  Drogues que l'élève a déjà prises |
 |:-----------------:|:----:|:-----------:|:----------------------------------:|
@@ -32,7 +32,7 @@ Le \(k\)-anonymat n'est pas une solution miracle : même si l'on ne parvient pas
 
 On ne sait pas exactement laquelle, mais on peut être certain qu'Arthur a déjà pris de la drogue !
 
-Mais le défaut majeur du \(k\)-anonymat et que la notion perd tout intérêt lorsque plusieurs jeux de données sont publiés successivement. Imaginons qu'Arthur ait changé d'établissement l'année suivante, et ait répondu à une autre enquête. Encore une fois, le jeu de données est \(3\)-anonyme.
+Mais le défaut majeur du $$k$$-anonymat et que la notion perd tout intérêt lorsque plusieurs jeux de données sont publiés successivement. Imaginons qu'Arthur ait changé d'établissement l'année suivante, et ait répondu à une autre enquête. Encore une fois, le jeu de données est $$3$$-anonyme.
 
 | Date de naissance | Sexe | Lycée       |  Drogues que l'élève a déjà prises |
 |:-----------------:|:----:|:-----------:|:----------------------------------:|
@@ -44,6 +44,6 @@ En croisant les informations contenues dans les deux tableaux, nous savons maint
 
 ## Conclusion
 
-La notion de \(k\)-anonymat est alléchante, parce qu'elle est relativement simple à comprendre, et elle semble garantir une certaine confidentialité des données. Mais elle ne garantit pas qu'on ne pourra rien apprendre sur une personne ayant participé à l'enquête. Pire encore : le \(k\)-anonymat n'est pas une garantie autonome, c'est-à-dire que la confidentialité d'un jeu de données peut être affectée par la publication ultérieure d'un autre jeu de données indépendant.
+La notion de $$k$$-anonymat est alléchante, parce qu'elle est relativement simple à comprendre, et elle semble garantir une certaine confidentialité des données. Mais elle ne garantit pas qu'on ne pourra rien apprendre sur une personne ayant participé à l'enquête. Pire encore : le $$k$$-anonymat n'est pas une garantie autonome, c'est-à-dire que la confidentialité d'un jeu de données peut être affectée par la publication ultérieure d'un autre jeu de données indépendant.
 
-Il est nécessaire d'introduire une garantie plus forte que le \(k\)-anonymat : la confidentialité différentielle.
+Il est nécessaire d'introduire une garantie plus forte que le $$k$$-anonymat : la confidentialité différentielle.
