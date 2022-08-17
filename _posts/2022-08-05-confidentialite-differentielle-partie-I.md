@@ -13,7 +13,7 @@ Autrement dit : l'anonymisation ne se résume pas à effacer le nom d'un jeu de 
 
 C'est là que les maths viennent à notre rescousse, en formalisant le concept de confidentialité, afin de pouvoir assurer aux personnes que leur anonymat sera respecté.
 
-## Le \(k\)-anonymat
+## Le \( k \)-anonymat
 
 On dit qu'un jeu de données est \(k\)-anonyme si, toute combinaison de données non-sensibles correspond à au moins \(k\) observations.
 
