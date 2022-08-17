@@ -13,9 +13,9 @@ Autrement dit : l'anonymisation ne se résume pas à effacer le nom d'un jeu de 
 
 C'est là que les maths viennent à notre rescousse, en formalisant le concept de confidentialité, afin de pouvoir assurer aux personnes que leur anonymat sera respecté.
 
-## Le \( k \)-anonymat
+## Le $k$-anonymat
 
-On dit qu'un jeu de données est \(k\)-anonyme si, toute combinaison de données non-sensibles correspond à au moins \(k\) observations.
+On dit qu'un jeu de données est $$k$$-anonyme si, toute combinaison de données non-sensibles correspond à au moins \(k\) observations.
 
 Par exemple, si notre jeu de données contient des informations démographiques comme la date de naissance, le sexe et le code postal, alors, pour qu'il soit \(3\)-anonyme, toute combinaison d'une date de naissance, d'un sexe et d'un code postal doit correspondre à au moins 3 individus différents.
 Plus \(k\) est un nombre élevé, et plus il est difficile d'identifier une personne dans un jeu de données \(k\)-anonyme.
