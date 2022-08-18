@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ArXiv musings: 2022, week 33
+title: ArXiv musings - 2022, week 33
 ---
 
 Here is a summary of a few papers that caught my eye this week.
