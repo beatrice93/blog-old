@@ -3,7 +3,7 @@ author: Bea
 #email: your-email@domain.com
 description: > # this means to ignore newlines until "baseurl:"
   A blog about things.
-remote_theme: bencentra/centrarium
+theme: minima
 
 # social links
 github_username:  beatrice93 # DO NOT include the @ character, or else the build will fail!
