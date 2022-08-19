@@ -1,9 +1,12 @@
+plugins: 
+    - jekyll-remote-theme
+
 title: Bea's notes
 author: Bea
 #email: your-email@domain.com
 description: > # this means to ignore newlines until "baseurl:"
   A public and personal notebook of sorts, where I write about my AI and Data science-related findings.
-remote_theme: poole/hyde
+remote_theme: daviddarnes/alembic@main
 
 # social links
 github_username:  beatrice93 # DO NOT include the @ character, or else the build will fail!
